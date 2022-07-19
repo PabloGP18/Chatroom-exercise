@@ -11,8 +11,18 @@ server.listen(8080, () =>{
 
 
 const io = require('socket.io')(server);
+
 let counter = 0;
 io.on('connection', (socket) => {
     counter++;
-    console.log(counter+' someone connected');});
+    console.log(counter+' someone connected');
+
+    socket.on('sendToAll', (message) => {
+    io.emit("displayMessage", (message));
+    });
+
+});
+
+
+
 
