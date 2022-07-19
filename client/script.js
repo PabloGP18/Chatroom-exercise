@@ -13,6 +13,13 @@ sendToAllButton.addEventListener('click' , ()=>{
 
 });
 
+sendToSelfButton.addEventListener('click',()=>{
+    let message = input.value;
+    input.value ="";
+    socket.emit('sendToOwn', message);
+    console.log(message);
+})
+
 socket.on("displayMessage",(message) => {
     let display = document.createElement("p");
     display.innerHTML = message;
