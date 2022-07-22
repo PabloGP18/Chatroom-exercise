@@ -27,12 +27,10 @@ io.on('connection', (socket) => {
         //broadcast will emit to everybody except the user that is connecting
         socket.broadcast.emit('message','A user has joined chatter');
 
-        //To send the whole array to one specific socket, you would do something like this:
-
-
         //when there is a disconnect
         socket.on('disconnect',()=>{
         io.emit('message','A user has left chatter');
+        counter--;
         })
 
         socket.on('sendToAll', (message) => {
