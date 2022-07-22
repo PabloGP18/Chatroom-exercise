@@ -4,8 +4,12 @@ const input = document.getElementById('postInput');
 const target = document.getElementById('target');
 const sendToAllButton = document.getElementById('toAll');
 const sendToSelfButton = document.getElementById('toSelf');
+const loginButton = document.getElementById("login-button");
+let removeLogin = document.getElementById("login-block");
 
-
+loginButton.addEventListener('click',()=>{
+    removeLogin.remove();
+});
 
 socket.on('message',message =>{
     console.log(message);
@@ -30,11 +34,12 @@ socket.on("displayMessage",(message)=> {
     display.innerHTML = message;
     target.appendChild(display);
 });
-
-const username = prompt('Welcome! Please enter your name:')
+const username = document.getElementById("userName").value;
+//const username = prompt('Welcome! Please enter your name:')
 socket.emit("logIn", username);
 socket.on("logUsers",(usersArray)=>{
     console.log(usersArray)
+    usersArray="";
     for (let i = 0; i <usersArray.length ; i++) {
         let display = document.createElement('p')
         display.innerHTML = usersArray[i];
