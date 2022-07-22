@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image:url("https://images.hdqwalls.com/download/minimal-morning-landscape-8k-gx-7680x4320.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#container-login{
+  width: 100%;
+  height: 100vh;
+}
+
+#login-block{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#login-form{
+  border:  1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#header-log > h1{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 80px;
+}
+#titel-form{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#userName{
+  outline: none;
+  border: none;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background: whitesmoke;
+}
+
+#login-button{
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+}
+
