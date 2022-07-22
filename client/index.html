@@ -1,5 +1,4 @@
-<html xmlns="http://www.w3.org/1999/html">
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -11,8 +10,19 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-<div class="enter-container">
-    <header class="enter-header" >
+<div id="container-login">
+    <div id="header-log">
+        <h1>Welcome to <strong><i>Chatter</i></strong></h1>
+    </div>
+    <div id="login-block">
+    <form id="login-form">
+        <label for="userName" id="titel-form">Choose a username</label>
+        <input type="text" name="name-login" id="userName" placeholder="Enter your username please..." required>
+        <button id="login-button" type="submit">Enter Chatter</button>
+    </form>
+    </div>
+
+    <!--<header class="enter-header" >
         <h1>Chatter</h1>
     </header>
     <main>
@@ -20,7 +30,8 @@
         <input type="submit" value="toAll" name="toAll" id="toAll">
         <input type="submit" value="toSelf" name="toSelf" id="toSelf">
         <div id="target"></div>
-    </main>
+    </main>-->
 </div>
+<a href="https://github.com/PabloGP18" target="_blank">check my other projects</a>
 </body>
 </html>
